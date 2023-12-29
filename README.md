@@ -1,2 +1,2 @@
 # Anitopia-Anime-Website
-Anitopia is a anime downloading platform. A frontend dummy project developed using HTML, CSS and JavaScript. Well, you cant technically download anime from here 😅, its just a sample website. Feel free to add your own favorite anime with the help of provided source code. 👍🏻
+<strong>Anitopia</strong> is a anime downloading platform.<br> A frontend dummy project developed using <i>HTML, CSS</i> and <i>JavaScript</i>.<br> NOTE: you cant technically download anime from here 😅, its just a sample website. Feel free to add your own favorite anime with the help of provided source code. 👍🏻
