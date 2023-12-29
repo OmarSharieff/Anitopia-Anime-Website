@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Attack On Titan | ANIMEHUB</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="shortcut icon" href="customization/FaviconLogo.png" type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <video src="trailer/Jujutsu Kaisen Trailer.mp4" autoplay muted loop></video>
+        <nav>
+            <div class="logo_ul">
+                <img src="./img/logo.png"  alt="Website_Logo">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" id="series">Series</a>
+                    </li>
+                    <li>
+                        <a href="#" id="movies">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#">Kids</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_user">
+                <input type="text" placeholder="Search..." id="search_input">
+                <img src="customization/user.jpeg" alt="user pic">
+                <div class="search">
+                    <!-- <a href="#" class="card">
+                        <img src="customization/spiderman_small_poster.png" id="movie_pic" alt="">
+                        <div class="cont">
+                            <h3>No Way Home</h3>
+                            <p>Superhero, 2021, <span>IMDB</span> <i class="bi bi-star-fill"></i> 9.4</p>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 id="title">Jujutsu Kaisen</h1>
+            <p>A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.</p>
+            <div class="details">
+                <h6>Anime</h6>
+                <h5 id="gen">Violence</h5>
+                <h4 id="date">2023</h4>
+                <h3 id="rate"><span>IMDB</span> <i class="bi bi-star-fill"></i> 9.8</h3>
+            </div>
+            <div class="btns">
+                <a href="jjk episodes.html" id="s1">Watch Episodes</a>
+            </div>
+        </div>
+        <section>
+            <h4>Popular</h4>
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <div class="cards">
+                <!-- <a href="#" class="card">
+                    <img src="customization/spiderman_small_poster.png" alt="" class="poster">
+                    <div class="rest_card">
+                        <img src="customization/spiderman landscape poster.png" alt="">
+                        <div class="cont">
+                            <h4>Spiderman: No Way Home</h4>
+                            <div class="sub">
+                                <p>Superhero, 2021</p>
+                                <h3><span>IMDB</span> <i class="bi bi-star-fill"></i> 9.4</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>  -->
+            </div>
+        </section>
+    </header>
+    <script src="./app.js"></script>
+    <script>
+        fetch(json_url).then((Response) => Response.json())
+        .then(data => {
+            let movies_array = data.filter(ele => {
+                return ele.name === "Jujutsu Kaisen";
+            });
+            // Adding the recent data "name" from "movie.json"
+        document.getElementById("title").innerText = movies_array[0].name;
+        document.getElementById("gen").innerText = movies_array[0].genre;
+        document.getElementById("date").innerText = movies_array[0].date; 
+        document.getElementById("rate").innerHTML = `<span>IMDB</span> <i class="bi bi-star-fill"></i> ${movies_array[0].imdb}`;
+        })
+    </script>
+</body>
+</html>
